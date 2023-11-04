@@ -13,7 +13,7 @@
                     <asp:BoundField DataField="PublisherName" HeaderText="PublisherName" SortExpression="PublisherName" />
                 </Columns>
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:booksDbConnectionString2 %>" DeleteCommand="DELETE FROM [Publisher] WHERE [PId] = @original_PId AND [PublisherName] = @original_PublisherName" InsertCommand="INSERT INTO [Publisher] ([PId], [PublisherName]) VALUES (@PId, @PublisherName)" OldValuesParameterFormatString="original_{0}" ProviderName="<%$ ConnectionStrings:booksDbConnectionString2.ProviderName %>" SelectCommand="SELECT * FROM [Publisher]" UpdateCommand="UPDATE [Publisher] SET [PublisherName] = @PublisherName WHERE [PId] = @original_PId AND [PublisherName] = @original_PublisherName">
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:booksDbConnectionString %>" DeleteCommand="DELETE FROM [Publisher] WHERE [PId] = @original_PId AND [PublisherName] = @original_PublisherName" InsertCommand="INSERT INTO [Publisher] ([PId], [PublisherName]) VALUES (@PId, @PublisherName)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [Publisher]" UpdateCommand="UPDATE [Publisher] SET [PublisherName] = @PublisherName WHERE [PId] = @original_PId AND [PublisherName] = @original_PublisherName">
                 <DeleteParameters>
                     <asp:Parameter Name="original_PId" Type="Int32" />
                     <asp:Parameter Name="original_PublisherName" Type="String" />
